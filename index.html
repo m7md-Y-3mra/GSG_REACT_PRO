@@ -59,34 +59,233 @@
               <i class="fas fa-bars categories__icon"></i>
               <span class="categories__title">All Categories</span>
             </div>
-            <div class="categories__list">
-              <a href="#" class="categories__item">Apple</a>
-              <a href="#" class="categories__item">Samsung</a>
-              <a href="#" class="categories__item">Meiza</a>
-              <a href="#" class="categories__item">Xiaomi</a>
-              <a href="#" class="categories__item">Honor</a>
-              <a href="#" class="categories__item">Huawei</a>
-              <a href="#" class="categories__item">Asus</a>
-              <a href="#" class="categories__item">Nokia</a>
-              <a href="#" class="categories__item">Motorola</a>
-              <a href="#" class="categories__item">Caterpillar</a>
-            </div>
+            <ul class="categories__list">
+              <li><a href="#" class="categories__item">Apple</a></li>
+              <li><a href="#" class="categories__item">Samsung</a></li>
+              <li><a href="#" class="categories__item">Meiza</a></li>
+              <li><a href="#" class="categories__item">Xiaomi</a></li>
+              <li><a href="#" class="categories__item">Honor</a></li>
+              <li><a href="#" class="categories__item">Huawei</a></li>
+              <li><a href="#" class="categories__item">Asus</a></li>
+              <li><a href="#" class="categories__item">Nokia</a></li>
+              <li><a href="#" class="categories__item">Motorola</a></li>
+              <li><a href="#" class="categories__item">Caterpillar</a></li>
+            </ul>
           </div>
         </nav>
       </div>
     </header>
 
     <!--=====================================
-    ================ Breadcrumb Nav =========
+    ================ Main Section ===========
     ======================================-->
-    <nav aria-label="Breadcrumb" class="breadcrumb">
+    <main class="main">
       <div class="container">
-        <ol>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a aria-current="page">Tablet & Laptops Acceccories</a></li>
-        </ol>
+        <!-- ========= Breadcrumb Nav ========= -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="#">Home</a></li>
+            <li class="breadcrumb__item"><a href="#">Categories</a></li>
+            <li class="breadcrumb__item" aria-current="page">
+              <a>Tablet & Laptops Acceccories</a>
+            </li>
+          </ol>
+        </nav>
+
+        <h2 class="page-title">Tablet & Laptops Acceccories</h2>
+
+        <div class="products-layout">
+          <aside class="products-layout__filters">
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>Related Categories</span>
+              </button>
+              <div class="filter-group__content">
+                <p>< Categories</p>
+                <p>Tablet & Laptops Acceccories</p>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>Tablet & Laptops Acceccories</span>
+              </button>
+              <div class="filter-group__content">
+                <select class="filter-group__select">
+                  <option value="android-6.0">android-6.0</option>
+                </select>
+                <button class="filter-group__clear-btn">clear all</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>Price</span>
+              </button>
+              <div class="filter-group__content">
+                <input type="range" class="filter-group__range-slider" />
+                <p class="filter-group__price-display">
+                  Price: <span>$55</span> - <span>$5000</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>Operating System</span>
+              </button>
+              <div class="filter-group__content">
+                <button class="filter-group__option-btn">Android 6</button>
+                <button class="filter-group__option-btn">Android 5.1</button>
+                <button class="filter-group__option-btn">Android 5.0</button>
+                <button class="filter-group__option-btn">Android 4.4</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>Screen size</span>
+              </button>
+              <div class="filter-group__content">
+                <button class="filter-group__option-btn">1920x1200</button>
+                <button class="filter-group__option-btn">1200x800</button>
+                <button class="filter-group__option-btn">2560x1600</button>
+                <button class="filter-group__option-btn">1920x1080</button>
+                <button class="filter-group__option-btn">2048x1536</button>
+                <button class="filter-group__option-btn">1980x1280</button>
+                <button class="filter-group__option-btn">1024x600</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>Process Core</span>
+              </button>
+              <div class="filter-group__content">
+                <button class="filter-group__option-btn">1920x1200</button>
+                <button class="filter-group__option-btn">1200x800</button>
+                <button class="filter-group__option-btn">2560x1600</button>
+                <button class="filter-group__option-btn">1920x1080</button>
+                <button class="filter-group__option-btn">2048x1536</button>
+                <button class="filter-group__option-btn">1980x1280</button>
+                <button class="filter-group__option-btn">1024x600</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>Table Data Capacity</span>
+              </button>
+              <div class="filter-group__content">
+                <button class="filter-group__option-btn">1920x1200</button>
+                <button class="filter-group__option-btn">1200x800</button>
+                <button class="filter-group__option-btn">2560x1600</button>
+                <button class="filter-group__option-btn">1920x1080</button>
+                <button class="filter-group__option-btn">2048x1536</button>
+                <button class="filter-group__option-btn">1980x1280</button>
+                <button class="filter-group__option-btn">1024x600</button>
+              </div>
+            </div>
+
+            <div class="product-tags">
+              <h3 class="product-tags__title">Product tag</h3>
+              <div class="product-tags__list">
+                <button class="product-tags__tag">Asus tablet</button>
+                <button class="product-tags__tag">Windows tablet</button>
+                <button class="product-tags__tag">Xiaomi tablet</button>
+                <button class="product-tags__tag">Hover</button>
+              </div>
+            </div>
+          </aside>
+
+          <section class="products-layout__main">
+            <header class="product-list__header">
+              <div class="product-list__view-controls">
+                <button
+                  class="product-list__view-btn product-list__view-btn--active"
+                >
+                  <i class="fa-solid fa-th"></i>
+                </button>
+                <button class="product-list__view-btn">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+                <p class="product-list__results-count">
+                  showing 16/125 results
+                </p>
+              </div>
+              <div class="product-list__sort-controls">
+                <label for="order-by">Sort by: </label>
+                <select id="order-by" class="product-list__sort-select">
+                  <option value="price-asc">price low to high</option>
+                </select>
+              </div>
+            </header>
+
+            <div class="product-list">
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="./assets/laptop-mock-up.webp"
+                  alt="A laptop"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star" data-rating="1"></i>
+                  <i class="fa-solid fa-star" data-rating="2"></i>
+                  <i class="fa-solid fa-star" data-rating="3"></i>
+                  <i class="fa-solid fa-star" data-rating="4"></i>
+                  <i class="fa-solid fa-star" data-rating="5"></i>
+                </div>
+                <h3 class="product-card__name">hp probook</h3>
+                <p class="product-card__price">$329.99</p>
+              </article>
+            </div>
+
+            <button class="product-list__show-more-btn">
+              <i class="fa-solid fa-ellipsis-h"></i>
+              <span>Show more</span>
+            </button>
+
+            <nav class="pagination">
+              <button class="pagination__btn pagination__btn--prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="pagination__btn pagination__btn--active">1</button>
+              <button class="pagination__btn pagination__btn--next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </nav>
+
+            <section class="recently-viewed">
+              <h2 class="recently-viewed__title">Recently viewed</h2>
+              <div class="recently-viewed__list">
+                <article class="product-card">
+                  <img
+                    class="product-card__image"
+                    src="./assets/laptop-mock-up.webp"
+                    alt="A laptop"
+                  />
+                  <div class="product-card__rating">
+                    <i class="fa-solid fa-star" data-rating="1"></i>
+                    <i class="fa-solid fa-star" data-rating="2"></i>
+                    <i class="fa-solid fa-star" data-rating="3"></i>
+                    <i class="fa-solid fa-star" data-rating="4"></i>
+                    <i class="fa-solid fa-star" data-rating="5"></i>
+                  </div>
+                  <h3 class="product-card__name">hp probook</h3>
+                  <p class="product-card__price">$329.99</p>
+                </article>
+              </div>
+            </section>
+          </section>
+        </div>
       </div>
-    </nav>
+    </main>
   </body>
 </html>
