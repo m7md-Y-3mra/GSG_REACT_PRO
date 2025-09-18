@@ -69,6 +69,11 @@ input {
   border: none;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 .container {
   width: 100%;
   padding: 0 15px;
@@ -279,4 +284,34 @@ input {
   padding: 5px 7px;
   font-size: 15px;
   color: var(--text-charcoal);
+}
+
+/* ============ BREADCRUMB ============*/
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  font-size: clamp(12px, 1.1vw, 16px);
+  color: var(--text-gray);
+  padding: 10px 0;
+}
+
+.breadcrumb ol li:not(:last-child)::after {
+  content: "/";
+}
+
+.breadcrumb a {
+  padding: 0 5px;
+  color: inherit;
+}
+
+.breadcrumb ol li::last-child a {
+  cursor: none;
+}
+
+.breadcrumb a:hover {
+  opacity: 0.8;
+}
+
+.breadcrumb ol li::last-child a:hover {
+  opacity: 1;
 }
