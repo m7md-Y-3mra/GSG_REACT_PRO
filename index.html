@@ -8,6 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
     <title>YouShop</title>
   </head>
   <body>
@@ -16,6 +17,7 @@
     ======================================-->
     <header class="header">
       <div class="container">
+        <!-- ========= Header Top ========= -->
         <div class="header__top">
           <div class="logo">
             <a href="/" class="logo__link">
@@ -25,7 +27,7 @@
             </a>
           </div>
 
-          <p class="description">Description of your online store.</p>
+          <p class="header__description">Description of your online store</p>
 
           <div class="search-bar">
             <input type="text" class="search-bar__input" placeholder="Search" />
@@ -52,7 +54,9 @@
             </div>
           </div>
         </div>
+        <!-- ========= End Header Top ========= -->
 
+        <!-- ========= Navigation ========= -->
         <nav class="navigation">
           <div class="categories">
             <div class="categories__header">
@@ -62,7 +66,7 @@
             <ul class="categories__list">
               <li><a href="#" class="categories__item">Apple</a></li>
               <li><a href="#" class="categories__item">Samsung</a></li>
-              <li><a href="#" class="categories__item">Meiza</a></li>
+              <li><a href="#" class="categories__item">Meizu</a></li>
               <li><a href="#" class="categories__item">Xiaomi</a></li>
               <li><a href="#" class="categories__item">Honor</a></li>
               <li><a href="#" class="categories__item">Huawei</a></li>
@@ -73,8 +77,12 @@
             </ul>
           </div>
         </nav>
+        <!-- ========= End Navigation ========= -->
       </div>
     </header>
+    <!--=====================================
+    ================ End Header =============
+    ======================================-->
 
     <!--=====================================
     ================ Main Section ===========
@@ -87,46 +95,58 @@
             <li class="breadcrumb__item"><a href="#">Home</a></li>
             <li class="breadcrumb__item"><a href="#">Categories</a></li>
             <li class="breadcrumb__item" aria-current="page">
-              <a>Tablet & Laptops Acceccories</a>
+              <a>Tablet & Laptops Accessories</a>
             </li>
           </ol>
         </nav>
+        <!-- ========= End Breadcrumb Nav ========= -->
 
-        <h2 class="page-title">Tablet & Laptops Acceccories</h2>
+        <h2 class="page-title">Tablet & Laptops Accessories</h2>
 
+        <!-- ========= Products Layout ========= -->
         <div class="products-layout">
+          <!-- ========= Filters ========= -->
           <aside class="products-layout__filters">
+            <button class="filter-sidebar__close" id="filterSidebarClose">
+              <i class="fa-solid fa-times"></i>
+            </button>
             <div class="filter-group">
               <button type="button" class="filter-group__toggle">
-                <i class="fa-solid fa-caret-down"></i>
                 <span>Related Categories</span>
+                <i class="fa-solid fa-caret-down"></i>
               </button>
               <div class="filter-group__content">
                 <p>< Categories</p>
-                <p>Tablet & Laptops Acceccories</p>
+                <p>Tablet & Laptops Accessories</p>
               </div>
             </div>
 
             <div class="filter-group">
               <button type="button" class="filter-group__toggle">
+                <span>Refine by</span>
                 <i class="fa-solid fa-caret-down"></i>
-                <span>Tablet & Laptops Acceccories</span>
               </button>
               <div class="filter-group__content">
                 <select class="filter-group__select">
-                  <option value="android-6.0">android-6.0</option>
+                  <option value="android-6.0">Android 6.0</option>
                 </select>
-                <button class="filter-group__clear-btn">clear all</button>
+                <button class="filter-group__clear-btn">Clear All</button>
               </div>
             </div>
 
             <div class="filter-group">
               <button type="button" class="filter-group__toggle">
-                <i class="fa-solid fa-caret-down"></i>
                 <span>Price</span>
+                <i class="fa-solid fa-caret-down"></i>
               </button>
               <div class="filter-group__content">
-                <input type="range" class="filter-group__range-slider" />
+                <input
+                  type="range"
+                  class="filter-group__range-slider"
+                  min="55"
+                  max="5000"
+                  value="2500"
+                />
                 <p class="filter-group__price-display">
                   Price: <span>$55</span> - <span>$5000</span>
                 </p>
@@ -135,63 +155,60 @@
 
             <div class="filter-group">
               <button type="button" class="filter-group__toggle">
-                <i class="fa-solid fa-caret-down"></i>
                 <span>Operating System</span>
+                <i class="fa-solid fa-caret-down"></i>
               </button>
               <div class="filter-group__content">
-                <button class="filter-group__option-btn">Android 6</button>
-                <button class="filter-group__option-btn">Android 5.1</button>
-                <button class="filter-group__option-btn">Android 5.0</button>
-                <button class="filter-group__option-btn">Android 4.4</button>
+                <div class="filter-group__options">
+                  <button
+                    class="filter-group__option-btn filter-group__option-btn--active"
+                  >
+                    Android 6
+                  </button>
+                  <button class="filter-group__option-btn">Android 5.1</button>
+                  <button class="filter-group__option-btn">Android 5.0</button>
+                  <button class="filter-group__option-btn">Android 4.4</button>
+                </div>
               </div>
             </div>
 
             <div class="filter-group">
               <button type="button" class="filter-group__toggle">
+                <span>Screen Size</span>
                 <i class="fa-solid fa-caret-down"></i>
-                <span>Screen size</span>
               </button>
               <div class="filter-group__content">
-                <button class="filter-group__option-btn">1920x1200</button>
-                <button class="filter-group__option-btn">1200x800</button>
-                <button class="filter-group__option-btn">2560x1600</button>
-                <button class="filter-group__option-btn">1920x1080</button>
-                <button class="filter-group__option-btn">2048x1536</button>
-                <button class="filter-group__option-btn">1980x1280</button>
-                <button class="filter-group__option-btn">1024x600</button>
+                <div class="filter-group__options">
+                  <button class="filter-group__option-btn">1920x1200</button>
+                  <button class="filter-group__option-btn">1200x800</button>
+                  <button class="filter-group__option-btn">2560x1600</button>
+                  <button class="filter-group__option-btn">1920x1080</button>
+                  <button class="filter-group__option-btn">2048x1536</button>
+                  <button class="filter-group__option-btn">1980x1280</button>
+                  <button class="filter-group__option-btn">1024x600</button>
+                </div>
               </div>
             </div>
 
             <div class="filter-group">
               <button type="button" class="filter-group__toggle">
+                <span>Processor Core</span>
                 <i class="fa-solid fa-caret-down"></i>
-                <span>Process Core</span>
               </button>
-              <div class="filter-group__content">
-                <button class="filter-group__option-btn">1920x1200</button>
-                <button class="filter-group__option-btn">1200x800</button>
-                <button class="filter-group__option-btn">2560x1600</button>
-                <button class="filter-group__option-btn">1920x1080</button>
-                <button class="filter-group__option-btn">2048x1536</button>
-                <button class="filter-group__option-btn">1980x1280</button>
-                <button class="filter-group__option-btn">1024x600</button>
-              </div>
             </div>
 
             <div class="filter-group">
               <button type="button" class="filter-group__toggle">
+                <span>Processor Core</span>
                 <i class="fa-solid fa-caret-down"></i>
-                <span>Table Data Capacity</span>
               </button>
-              <div class="filter-group__content">
-                <button class="filter-group__option-btn">1920x1200</button>
-                <button class="filter-group__option-btn">1200x800</button>
-                <button class="filter-group__option-btn">2560x1600</button>
-                <button class="filter-group__option-btn">1920x1080</button>
-                <button class="filter-group__option-btn">2048x1536</button>
-                <button class="filter-group__option-btn">1980x1280</button>
-                <button class="filter-group__option-btn">1024x600</button>
-              </div>
+            </div>
+
+            <div class="filter-group">
+              <button type="button" class="filter-group__toggle">
+                <span>Tablet Data Capacity</span>
+                <i class="fa-solid fa-caret-down"></i>
+              </button>
             </div>
 
             <div class="product-tags">
@@ -204,10 +221,16 @@
               </div>
             </div>
           </aside>
+          <!-- ========= End Filters ========= -->
 
+          <!-- ========= Products Section ========= -->
           <section class="products-layout__main">
+            <!-- ========= Product List Header ========= -->
             <header class="product-list__header">
               <div class="product-list__view-controls">
+                <button class="mobile-filter-toggle" id="mobileFilterToggle">
+                  <i class="fa-solid fa-filter"></i>
+                </button>
                 <button
                   class="product-list__view-btn product-list__view-btn--active"
                 >
@@ -217,75 +240,703 @@
                   <i class="fa-solid fa-bars"></i>
                 </button>
                 <p class="product-list__results-count">
-                  showing 16/125 results
+                  Showing 16 / 125 results
                 </p>
               </div>
               <div class="product-list__sort-controls">
                 <label for="order-by">Sort by: </label>
                 <select id="order-by" class="product-list__sort-select">
                   <option value="price-asc">price low to high</option>
+                  <option value="price-desc">price high to low</option>
+                  <option value="name-asc">name A to Z</option>
+                  <option value="name-desc">name Z to A</option>
                 </select>
               </div>
             </header>
+            <!-- ========= End Product List Header ========= -->
 
+            <!-- ========= Product List ========= -->
             <div class="product-list">
               <article class="product-card">
                 <img
                   class="product-card__image"
-                  src="./assets/laptop-mock-up.webp"
-                  alt="A laptop"
+                  src="assets/laptop-mock-up.webp"
+                  alt="Lenovo P8 Tablet 8 plus"
                 />
                 <div class="product-card__rating">
-                  <i class="fa-solid fa-star" data-rating="1"></i>
-                  <i class="fa-solid fa-star" data-rating="2"></i>
-                  <i class="fa-solid fa-star" data-rating="3"></i>
-                  <i class="fa-solid fa-star" data-rating="4"></i>
-                  <i class="fa-solid fa-star" data-rating="5"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
                 </div>
-                <h3 class="product-card__name">hp probook</h3>
+                <h3 class="product-card__name">Lenovo P8 Tablet 8 plus</h3>
                 <p class="product-card__price">$329.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="Teclast P10 Quad Core 3G"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="product-card__name">Teclast P10 Quad Core 3G</h3>
+                <p class="product-card__price">$159.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="BGF 15 inch Design 3D"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">BGF 15 inch Design 3D</h3>
+                <p class="product-card__price">$589.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="BGF 10 inch Octa Core"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="product-card__name">BGF 10 inch Octa Core</h3>
+                <p class="product-card__price">$50.00</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="Teclast Tbook T 8G inch Tablet"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">
+                  Teclast Tbook T 8G inch Tablet
+                </h3>
+                <p class="product-card__price">$421.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="10.1 inch Android 6.0 32GB"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">10.1 inch Android 6.0 32GB</h3>
+                <p class="product-card__price">$360.00</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+                <span class="product-card__badge product-card__badge--sale"
+                  >-50%</span
+                >
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="Aoson R102 10.1 inch"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">Aoson R102 10.1 inch</h3>
+                <p class="product-card__price">
+                  $199.00 <span class="product-card__price--old">$299.00</span>
+                </p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="PULGOL 10 inch Tablet PC Octa"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="product-card__name">
+                  PULGOL 10 inch Tablet PC Octa
+                </h3>
+                <p class="product-card__price">$313.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="LZWIN 2018 Android 10 Core"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">LZWIN 2018 Android 10 Core</h3>
+                <p class="product-card__price">$100.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="BMXc 10 inch Tablet PC 3G 4G"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">BMXc 10 inch Tablet PC 3G 4G</h3>
+                <p class="product-card__price">$99.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="Luxury Golden 10.1 inch"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">Luxury Golden 10.1 inch</h3>
+                <p class="product-card__price">$156.00</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="PULGOL 10 inch Tablet PC"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="product-card__name">PULGOL 10 inch Tablet PC</h3>
+                <p class="product-card__price">$1025.00</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="CARBAYSTAR T8 10.1 Android 10"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">
+                  CARBAYSTAR T8 10.1 Android 10
+                </h3>
+                <p class="product-card__price">$329.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="COMPUTER 10 inch Octa Core"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="product-card__name">COMPUTER 10 inch Octa Core</h3>
+                <p class="product-card__price">$85.00</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="BGF 15 inch Design 3D"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">BGF 15 inch Design 3D</h3>
+                <p class="product-card__price">$56.99</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <img
+                  class="product-card__image"
+                  src="assets/laptop-mock-up.webp"
+                  alt="EXCELVAN YOGA BOOK X90L"
+                />
+                <div class="product-card__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h3 class="product-card__name">EXCELVAN YOGA BOOK X90L</h3>
+                <p class="product-card__price">$136.50</p>
+                <div class="product-card__actions">
+                  <button class="product-card__add-to-cart">Add to Cart</button>
+                  <button class="product-card__favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
               </article>
             </div>
+            <!-- ========= End Product List ========= -->
 
             <button class="product-list__show-more-btn">
               <i class="fa-solid fa-ellipsis-h"></i>
               <span>Show more</span>
             </button>
 
+            <!-- ========= Pagination ========= -->
             <nav class="pagination">
               <button class="pagination__btn pagination__btn--prev">
                 <i class="fa-solid fa-chevron-left"></i>
               </button>
               <button class="pagination__btn pagination__btn--active">1</button>
+              <button class="pagination__btn">2</button>
+              <button class="pagination__btn">3</button>
+              <button class="pagination__btn">4</button>
+              <button class="pagination__btn">5</button>
+              <button class="pagination__btn">26</button>
               <button class="pagination__btn pagination__btn--next">
                 <i class="fa-solid fa-chevron-right"></i>
               </button>
             </nav>
+            <!-- ========= End Pagination ========= -->
 
+            <!-- ========= Recently Viewed ========= -->
             <section class="recently-viewed">
-              <h2 class="recently-viewed__title">Recently viewed</h2>
+              <h2 class="recently-viewed__title">Recently Viewed</h2>
               <div class="recently-viewed__list">
                 <article class="product-card">
                   <img
                     class="product-card__image"
-                    src="./assets/laptop-mock-up.webp"
-                    alt="A laptop"
+                    src="assets/laptop-mock-up.webp"
+                    alt="LZWIN 2018 Android 10 Core"
                   />
                   <div class="product-card__rating">
-                    <i class="fa-solid fa-star" data-rating="1"></i>
-                    <i class="fa-solid fa-star" data-rating="2"></i>
-                    <i class="fa-solid fa-star" data-rating="3"></i>
-                    <i class="fa-solid fa-star" data-rating="4"></i>
-                    <i class="fa-solid fa-star" data-rating="5"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                   </div>
-                  <h3 class="product-card__name">hp probook</h3>
-                  <p class="product-card__price">$329.99</p>
+                  <h3 class="product-card__name">LZWIN 2018 Android 10 Core</h3>
+                  <p class="product-card__price">$100.99</p>
+                </article>
+
+                <article class="product-card">
+                  <img
+                    class="product-card__image"
+                    src="assets/laptop-mock-up.webp"
+                    alt="BMXc 10 inch Tablet PC 3G 4G"
+                  />
+                  <div class="product-card__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h3 class="product-card__name">
+                    BMXc 10 inch Tablet PC 3G 4G
+                  </h3>
+                  <p class="product-card__price">$99.99</p>
+                </article>
+
+                <article class="product-card">
+                  <img
+                    class="product-card__image"
+                    src="assets/laptop-mock-up.webp"
+                    alt="Luxury Golden 10.1 inch"
+                  />
+                  <div class="product-card__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h3 class="product-card__name">Luxury Golden 10.1 inch</h3>
+                  <p class="product-card__price">$156.00</p>
+                </article>
+
+                <article class="product-card">
+                  <img
+                    class="product-card__image"
+                    src="assets/laptop-mock-up.webp"
+                    alt="PULGOL 10 inch Tablet PC"
+                  />
+                  <div class="product-card__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <h3 class="product-card__name">PULGOL 10 inch Tablet PC</h3>
+                  <p class="product-card__price">$1025.00</p>
                 </article>
               </div>
             </section>
+            <!-- ========= End Recently Viewed ========= -->
           </section>
+          <!-- ========= End Products Section ========= -->
         </div>
+        <!-- ========= End Products Layout ========= -->
       </div>
     </main>
+    <!-- ========= Most Search Keywords ========= -->
+    <section class="keywords-section">
+      <div class="container">
+        <h2 class="keywords-section__title">Most Search Keywords</h2>
+        <div class="keywords-section__content">
+          <div class="keywords-section__column">
+            <h3 class="keywords-section__subtitle">Laptops:</h3>
+            <ul class="keywords-section__list">
+              <li>
+                <a href="#" class="keywords-section__link">Acer Laptops</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Asus Laptops</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Samsung Laptops</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Lenovo Laptops</a>
+              </li>
+            </ul>
+          </div>
+          <div class="keywords-section__column">
+            <h3 class="keywords-section__subtitle">Tablets:</h3>
+            <ul class="keywords-section__list">
+              <li>
+                <a href="#" class="keywords-section__link">Huion Watches</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Titan Watches</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Casion Watches</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Fastrack Watches</a>
+              </li>
+            </ul>
+          </div>
+          <div class="keywords-section__column">
+            <h3 class="keywords-section__subtitle">Mobile phone:</h3>
+            <ul class="keywords-section__list">
+              <li>
+                <a href="#" class="keywords-section__link">Chuwi Tablet</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Laptop Bags</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Apple Laptop</a>
+              </li>
+              <li>
+                <a href="#" class="keywords-section__link">Dell Laptop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========= End Most Search Keywords ========= -->
+    <!--=====================================
+    ================ End Main Section ========
+    ======================================-->
+
+    <!--=====================================
+    ================ Footer =================
+    ======================================-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__column">
+            <h3 class="footer__title">Contact us</h3>
+            <div class="footer__contact-info">
+              <p class="footer__contact-item">
+                <i class="fa-solid fa-phone"></i>
+                (+880) 123 456 7890
+              </p>
+              <p class="footer__contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                manager@shop.com
+              </p>
+              <p class="footer__contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                Location store
+              </p>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Policies & Info</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Privacy Policy</a></li>
+              <li><a href="#" class="footer__link">Policy for Sellers</a></li>
+              <li><a href="#" class="footer__link">Policy for Buyers</a></li>
+              <li><a href="#" class="footer__link">Shipping & Refund</a></li>
+              <li><a href="#" class="footer__link">Wholesale Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Store Location</a></li>
+              <li><a href="#" class="footer__link">Seller Sign up</a></li>
+              <li><a href="#" class="footer__link">Seller Handbook</a></li>
+              <li><a href="#" class="footer__link">Seller Central</a></li>
+              <li><a href="#" class="footer__link">Seller FAQ's</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">My account</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">My Account</a></li>
+              <li><a href="#" class="footer__link">Shopping Cart</a></li>
+              <li><a href="#" class="footer__link">My Links</a></li>
+              <li><a href="#" class="footer__link">Bills</a></li>
+              <li><a href="#" class="footer__link">Exclusive Tablets</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Subscribe now</h3>
+            <p class="footer__newsletter-text">
+              Get E-mail updates about our latest shop and special offers.
+            </p>
+            <form class="footer__newsletter-form">
+              <input
+                type="email"
+                class="footer__newsletter-input"
+                placeholder="Enter your email here..."
+              />
+              <button type="submit" class="footer__newsletter-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <div class="footer__social-links">
+              <a href="#" class="footer__social-link">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="footer__social-link">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="footer__social-link">
+                <i class="fa-brands fa-google-plus-g"></i>
+              </a>
+              <a href="#" class="footer__social-link">
+                <i class="fa-brands fa-rss"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            <p>Copyright © 2018 Craft Technology.</p>
+          </div>
+          <div class="footer__payment-methods">
+            <img
+              src="/placeholder.svg?height=30&width=40"
+              alt="Visa"
+              class="footer__payment-icon"
+            />
+            <img
+              src="/placeholder.svg?height=30&width=40"
+              alt="RSS"
+              class="footer__payment-icon"
+            />
+            <img
+              src="/placeholder.svg?height=30&width=40"
+              alt="CSS"
+              class="footer__payment-icon"
+            />
+            <img
+              src="/placeholder.svg?height=30&width=40"
+              alt="PayPal"
+              class="footer__payment-icon"
+            />
+            <img
+              src="/placeholder.svg?height=30&width=40"
+              alt="MasterCard"
+              class="footer__payment-icon"
+            />
+            <img
+              src="/placeholder.svg?height=30&width=40"
+              alt="Discover"
+              class="footer__payment-icon"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=====================================
+    ================ End Footer =============
+    ======================================-->
+    <div class="filter-sidebar__overlay" id="filterSidebarOverlay"></div>
   </body>
 </html>
