@@ -109,6 +109,142 @@ ol {
   }
 }
 
+/* Top Navigation Bar */
+.top-nav {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #404040;
+}
+
+@media (min-width: 768px) {
+  .top-nav {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+}
+
+.top-nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .top-nav .container {
+    justify-content: space-between;
+  }
+}
+
+.top-nav__left,
+.top-nav__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .top-nav__left {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .top-nav__left {
+    display: flex;
+  }
+}
+
+.top-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .top-nav__item {
+    gap: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .top-nav__item {
+    display: flex !important;
+  }
+}
+
+.top-nav__item:hover {
+  color: #ffffff;
+}
+
+.top-nav__item::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.2s ease;
+}
+
+.top-nav__item:hover::after {
+  width: 100%;
+}
+
+.top-nav__item i {
+  font-size: 11px;
+  width: 12px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .top-nav__item i {
+    font-size: 12px;
+    width: 14px;
+  }
+}
+
+.top-nav__item span {
+  font-size: 11px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .top-nav__item span {
+    font-size: 13px;
+    display: block;
+  }
+}
+
+.top-nav__right .top-nav__item:last-child {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.top-nav__right .top-nav__item:last-child:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.top-nav__right .top-nav__item:last-child::after {
+  display: none;
+}
+
 /* ============ HEADER ============*/
 .header {
   background-color: var(--background-white);
@@ -1033,7 +1169,6 @@ ol {
   margin-bottom: clamp(12px, 1.8vw, 15px);
   flex-direction: column;
   gap: 5px;
-  overflow: hidden;
 }
 
 @media (min-width: 992px) {
